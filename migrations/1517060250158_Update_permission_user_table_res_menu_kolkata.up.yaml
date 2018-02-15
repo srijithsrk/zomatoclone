@@ -1,0 +1,9 @@
+- args:
+    permission:
+      columns:
+      - res_id
+      - photo_id
+      filter: {}
+    role: user
+    table: res_menu_kolkata
+  type: create_select_permission

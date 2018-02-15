@@ -1,0 +1,3 @@
+- args:
+    name: review_delhi
+  type: add_existing_table_or_view

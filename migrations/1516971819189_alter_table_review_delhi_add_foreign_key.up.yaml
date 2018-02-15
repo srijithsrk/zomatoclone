@@ -1,0 +1,4 @@
+- args:
+    sql: ALTER TABLE "review_delhi" ADD FOREIGN KEY ("hasura_id") REFERENCES "user_table"
+      ("hasura_id")
+  type: run_sql

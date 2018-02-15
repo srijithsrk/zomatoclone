@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "review_kolkata" ALTER COLUMN "hasura_id" TYPE integer;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "review_kolkata" ALTER COLUMN "hasura_id" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "review_kolkata" ALTER COLUMN "hasura_id" SET NOT NULL;
+  type: run_sql

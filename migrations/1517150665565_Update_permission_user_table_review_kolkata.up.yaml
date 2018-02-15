@@ -1,0 +1,12 @@
+- args:
+    permission:
+      columns:
+      - date
+      - review_text
+      - stars
+      filter:
+        hasura_id:
+          $eq: X-HASURA-USER-ID
+    role: user
+    table: review_kolkata
+  type: create_update_permission

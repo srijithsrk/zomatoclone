@@ -1,0 +1,87 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+const BasicExample = () => (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Login</Link>
+        </li>
+        <li>
+          <Link to="/">profilepage</Link>
+        </li>
+        <li>
+          <Link to="/Login">Signup</Link>
+        </li>
+        <li>
+          <Link to="/">ResturantsSearch</Link>
+        </li>
+        <li>
+          <Link to="/ResturantsSearch">UsersReview</Link>
+        </li>
+        <li>
+          <Link to="/ResturantsSearch">ImagesReviews</Link>
+        </li>
+      </ul>
+      <hr />
+
+      <Route exact path="/" component={Login} />
+      <Route exact path="/" component={profilepage} />
+      <Route path="/" component={ResturantsSearch} />
+      <Route path="/Login" component={Signup} />
+      <Route path="/ResturantsSearch" component={UsersReview} />
+      <Route path="/ResturantsSearch" component={ImagesReviews} />
+    </div>
+  </Router>
+);
+
+const Login = () => (
+  <div>
+    <h2>login</h2>
+    <ul>
+      <li>
+        <Link to={`${match.url}/Rendering`}>Signup</Link>
+      </li>
+  </div>
+);
+const profilepage = () => (
+  <div>
+    <h2>profilepage</h2>
+  </div>
+);
+
+const Signup = () => (
+  <div>
+    <h2>Signup</h2>
+  </div>
+);
+
+const ResturantsSearch = ({ match }) => (
+  <div>
+    <h2>RestaurantsSearch</h2>
+    <ul>
+      <li>
+        <Link to={`${match.url}/render`}>UsersReview</Link>
+      </li>
+      <li>
+        <Link to={`${match.url}/render`}>ImagesReviews</Link>
+      </li>
+    </ul>
+
+    <Route path={`${match.url}/:ResturantsSearchId`} component={ResturantsSearch} />
+    <Route
+      exact
+      path={match.url}
+      render={() => <h3>Please select a restaurant.</h3>}
+    />
+  </div>
+);
+
+const ResturantsSearch= ({ match }) => (
+  <div>
+    <h3>{match.params.ResturantsSearchId}</h3>
+  </div>
+);
+
+export default BasicExample;

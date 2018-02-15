@@ -1,0 +1,13 @@
+- args:
+    permission:
+      columns:
+      - review_id
+      - res_id
+      - hasura_id
+      - stars
+      - review_text
+      - date
+      filter: {}
+    role: user
+    table: review_kolkata
+  type: create_select_permission

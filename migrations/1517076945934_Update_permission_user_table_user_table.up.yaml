@@ -1,0 +1,16 @@
+- args:
+    role: user
+    table: user_table
+  type: drop_update_permission
+- args:
+    permission:
+      columns:
+      - hasura_id
+      - name
+      - photo_id
+      filter:
+        hasura_id:
+          $eq: X-HASURA-USER-ID
+    role: user
+    table: user_table
+  type: create_update_permission

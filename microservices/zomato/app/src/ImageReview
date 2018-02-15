@@ -1,0 +1,57 @@
+import React from 'react';
+let number = 0;
+class Parent extends React.Component {
+constructor(props) {
+super(props);
+this.state = {
+item : [
+createData( firstimage, "Image 1"),
+createData( secondimage, "Image 2"),
+createData( thirdimage, "Image 3"),
+createData( fourthimage, "Image 4"),
+],
+imgs : [imgsrc1,imgsrc2, imgsrc3, imgsrc4],
+}
+}
+Icon (n) {        //function created
+let newStateArray = this.state.item.slice();  //slicing done 
+let newSubStateArray = newStateArray[n].slice();
+if(number === 1) 
+{
+newSubStateArray[0] = this.state.imgs[0];
+this.setState({imgsrc:newSubStateArray});
+number++;
+}
+ else if (number === 2)
+  {
+newSubStateArray[0] = this.state.imgs[1];
+this.setState({imgsrc:newSubStateArray});
+number++;
+} 
+else if (number === 3) 
+{
+newSubStateArray[0] = this.state.imgs[2];
+this.setState({imgsrc:newSubStateArray});
+number++;
+} 
+else if (number === 4)
+{
+newSubStateArray[0] = this.state.imgs[4];
+this.setState({imgsrc:newSubStateArray});
+number++;
+} 
+}           
+render () 
+{
+let { data }= this.state;
+return(
+<div>
+{data.map((n) => {
+return(
+<Child imgsrc={n.imgsrc} key={n} Icon={this.Icon.bind(this, n)} header={n.header} />
+);
+}
+)
+}
+</div>
+);

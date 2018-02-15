@@ -1,0 +1,18 @@
+- args:
+    role: user
+    table: ciry_table_index
+  type: drop_select_permission
+- args:
+    permission:
+      columns:
+      - tag_table
+      - res_table
+      - menu_table
+      - city
+      - cuisine_tbale
+      - image_tabale
+      - review_table
+      filter: {}
+    role: user
+    table: ciry_table_index
+  type: create_select_permission

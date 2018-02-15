@@ -1,0 +1,53 @@
+import React from 'react';
+class Image extends React.Component  //consists of array of images
+{
+constructor(props) 
+{
+super(props);
+this.state = { pointer: 0, imgs: props.imgs };
+this.handleClick = this.handleClick.bind(this);
+}
+handleClick() 
+{
+const { length } = this.state.imgs;
+const { pointer } = this.state;
+const newPointer =  pointer === length - 1 ? 0 : pointer + 1;
+this.setState({ pointer: newPointer });
+}
+render() 
+{
+const { pointer, imgs } = this.state;
+return
+(
+<div>
+<img src={imgs[pointer]} onClick={this.handleClick} />
+</div>
+);
+}}
+class ImageSet extends React.Component    //a subset of images for previous class passed
+{
+constructor() {
+super();
+this.state = {
+imgs: [
+'https://dummyimage.com/100x100/000000/fff.png',
+'https://dummyimage.com/100x100/41578a/fff.png',
+'https://dummyimage.com/100x100/428a49/fff.png',
+'https://dummyimage.com/100x100/bd86bd/fff.png',
+'https://dummyimage.com/100x100/68b37c/fff.png',
+'https://dummyimage.com/100x100/c7bfa7/000000.png'
+]
+}
+}
+render() 
+{
+const { imgs } = this.state;
+return
+(
+<div>
+<Image imgs={imgs.slice(0, 3)} />
+<Image imgs={imgs.slice(3, 6)} />
+</div>
+)
+}
+}

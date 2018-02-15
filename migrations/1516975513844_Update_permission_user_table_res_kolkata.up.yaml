@@ -1,0 +1,12 @@
+- args:
+    permission:
+      columns:
+      - res_lng
+      - res_add
+      - res_name
+      - res_lat
+      - res_id
+      filter: {}
+    role: user
+    table: res_kolkata
+  type: create_select_permission

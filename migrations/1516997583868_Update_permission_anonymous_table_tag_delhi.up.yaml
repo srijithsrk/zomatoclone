@@ -1,0 +1,9 @@
+- args:
+    permission:
+      columns:
+      - tag
+      - res_id
+      filter: {}
+    role: anonymous
+    table: tag_delhi
+  type: create_select_permission

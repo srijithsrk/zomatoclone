@@ -1,0 +1,10 @@
+- args:
+    permission:
+      columns:
+      - hasura_id
+      - name
+      - photo_id
+      filter: {}
+    role: anonymous
+    table: user_table
+  type: create_select_permission

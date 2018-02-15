@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "cuisine_kol" ALTER COLUMN "cuisine" TYPE text;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "cuisine_kol" ALTER COLUMN "cuisine" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "cuisine_kol" ALTER COLUMN "cuisine" SET NOT NULL;
+  type: run_sql

@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "tag_kolkata" ALTER COLUMN "tag" TYPE text;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "tag_kolkata" ALTER COLUMN "tag" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "tag_kolkata" ALTER COLUMN "tag" SET NOT NULL;
+  type: run_sql

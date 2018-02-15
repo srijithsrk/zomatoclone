@@ -1,0 +1,7 @@
+- args:
+    sql: CREATE TABLE "cuisine_kol"("res_id" integer NOT NULL, "cuisine" text NOT
+      NULL, PRIMARY KEY ("res_id","cuisine") )
+  type: run_sql
+- args:
+    name: cuisine_kol
+  type: add_existing_table_or_view

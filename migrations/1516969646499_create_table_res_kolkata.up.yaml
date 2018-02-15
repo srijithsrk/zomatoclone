@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "res_kolkata"("res_id" serial NOT NULL, "res_name" text NOT
+      NULL, "res_add" text , "res_lat" numeric NOT NULL, "res_lng" numeric NOT NULL,
+      PRIMARY KEY ("res_id") )
+  type: run_sql
+- args:
+    name: res_kolkata
+  type: add_existing_table_or_view

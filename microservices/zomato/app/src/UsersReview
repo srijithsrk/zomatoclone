@@ -1,0 +1,29 @@
+import React from 'react';
+class Restaurants extends Component{
+constructor()
+{
+super();
+this.state={
+txt: 'give your reviews for the restaurant here'
+}
+}
+update(e){
+this.setState(
+{txt:e.target.Value}
+)
+}
+render()
+{
+return
+(
+<div>
+<input type="text"
+onChange={this.update.bind(this)}/>
+<h1>
+{this.state.txt}
+</h1>
+</div>
+)
+}
+}
++export default Restaurants

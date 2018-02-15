@@ -1,0 +1,9 @@
+- args:
+    permission:
+      columns:
+      - res_id
+      - tag
+      filter: {}
+    role: user
+    table: tag_kolkata
+  type: create_select_permission

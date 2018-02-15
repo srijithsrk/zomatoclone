@@ -1,0 +1,8 @@
+- args:
+    sql: CREATE TABLE "ciry_table_index"("city" text NOT NULL, "res_table" text NOT
+      NULL, "cuisine_tbale" text NOT NULL, "image_tabale" text NOT NULL, "menu_table"
+      text NOT NULL, "review_table" text NOT NULL, PRIMARY KEY ("city") )
+  type: run_sql
+- args:
+    name: ciry_table_index
+  type: add_existing_table_or_view

@@ -1,0 +1,9 @@
+- args:
+    permission:
+      columns:
+      - res_id
+      - cuisine
+      filter: {}
+    role: user
+    table: cuisine_kol
+  type: create_select_permission

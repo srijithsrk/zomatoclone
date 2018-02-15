@@ -1,0 +1,4 @@
+- args:
+    sql: ALTER TABLE "cuisine_kol" ADD FOREIGN KEY ("cuisine") REFERENCES "cuisine_table"
+      ("cuisine")
+  type: run_sql

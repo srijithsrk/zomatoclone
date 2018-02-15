@@ -1,0 +1,9 @@
+- args:
+    sql: ALTER TABLE "res_menu_kolkata" ALTER COLUMN "res_id" TYPE integer;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "res_menu_kolkata" ALTER COLUMN "res_id" DROP DEFAULT;
+  type: run_sql
+- args:
+    sql: ALTER TABLE "res_menu_kolkata" ALTER COLUMN "res_id" SET NOT NULL;
+  type: run_sql

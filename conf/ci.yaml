@@ -1,0 +1,32 @@
+# Defines continuous integration for the project
+
+# registry defines a custom docker registry to push images that are built on the cluster
+registry: {{ cluster.metadata.registry|json }}
+
+# remotes define which microservices has to be updated when code is pushed to the remote
+remotes:
+  # Example:
+  
+  # remote-name:
+  #   namespace.service-name:
+  #     container-name:
+  #       path: microservices/app
+  #       dockerfile: microservices/app/Dockerfile
+  
+  # Default remote to push code and configuration
+  {{ cluster.name }}:        # DO NOT edit this line
+    <<: {}                   # DO NOT edit this line
+    
+    # Add output of `hasura conf generate-remote` below this line
+
+    '{{ cluster.metadata.namespaces.user }}.zomatonode':
+      zomatonode:
+        dockerfile: microservices/zomatonode/Dockerfile
+        path: microservices/zomatonode
+
+
+    '{{ cluster.metadata.namespaces.user }}.zomato':
+      zomato:
+        dockerfile: microservices/zomato/Dockerfile
+        path: microservices/zomato
+

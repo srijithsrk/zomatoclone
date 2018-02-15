@@ -1,0 +1,3 @@
+- args:
+    sql: ALTER TABLE "tag_kolkata" ADD FOREIGN KEY ("tag") REFERENCES "tags" ("tag")
+  type: run_sql

@@ -1,0 +1,13 @@
+- args:
+    permission:
+      columns:
+      - city
+      - image_tabale
+      - review_table
+      - res_table
+      - menu_table
+      - cuisine_tbale
+      filter: {}
+    role: user
+    table: ciry_table_index
+  type: create_select_permission

@@ -1,0 +1,13 @@
+- args:
+    role: anonymous
+    table: res_image_kolkata
+  type: drop_select_permission
+- args:
+    permission:
+      columns:
+      - photo_id
+      - res_id
+      filter: {}
+    role: anonymous
+    table: res_image_kolkata
+  type: create_select_permission
