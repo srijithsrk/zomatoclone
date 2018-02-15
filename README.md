@@ -1,3 +1,8 @@
+# Food Order App
+
+This repository is made using Reactjs(frontend) and Node-Express(backend).
+This webapp is basically a kind of clone for Zomato
+
 # base
 
 A blank template to be used as a starting point to build projects on Hasura. A "project" is a "gittable" directory in the file system, which captures all the information regarding clusters, services and migrations. It can also be used to keep source code for custom services that you write.
