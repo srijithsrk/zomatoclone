@@ -1,7 +1,7 @@
 # Food Order App
 
 This repository is made using Reactjs(frontend) and Node-Express(backend).
-This webapp is basically a kind of clone for Zomato
+This webapp is basically a clone for Zomato,which is a food order app.
 
 # base
 
