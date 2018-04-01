@@ -2,6 +2,7 @@
 
 This repository is made using Reactjs(frontend) and Node-Express(backend).
 This webapp is basically a clone for Zomato,which is a food order app.
+I have used the API's of hasura which is a startup company for cloud.
 
 # base
 
